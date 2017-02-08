@@ -1,5 +1,2 @@
-require "srack/version"
-
-module Srack
-  # Your code goes here...
-end
+require 'srack/version'
+require 'srack/client'
