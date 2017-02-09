@@ -8,12 +8,15 @@ module Rbslack
     def initialize(token:)
       @connection = connection
       @token = token
-      @search = Rbslack::Search::Request.new(connection, token)
     end
 
     def auth_test
       res = connection.post '/api/auth.test', token: token, pretty: 1
       res.body
+    end
+
+    def search
+      @search ||= Rbslack::Search::Request.new(connection, token)
     end
 
     private
