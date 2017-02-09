@@ -1,7 +1,7 @@
 require 'faraday'
 require 'faraday_middleware'
 
-module Srack
+module Rbslack
   class Client
     BASE_URL = 'https://slack.com'
     attr_reader :api_key, :connection

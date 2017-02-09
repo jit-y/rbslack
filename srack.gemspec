@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'srack/version'
+require 'rbslack/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'srack'
-  spec.version       = Srack::VERSION
+  spec.name          = 'rbslack'
+  spec.version       = Rbslack::VERSION
   spec.authors       = ['yuji takahashi']
   spec.email         = ['jit.y.31@gmail.com']
   spec.summary       = 'An API Client Library for Slack'
-  spec.homepage      = "https://github.com/jit-y/srack"
+  spec.homepage      = "https://github.com/jit-y/rbslack"
   spec.license       = 'MIT'
 
   if spec.respond_to?(:metadata)

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Srack do
+describe Rbslack do
   it 'has a version number' do
-    expect(Srack::VERSION).not_to be nil
+    expect(Rbslack::VERSION).not_to be nil
   end
 
   it 'does something useful' do
