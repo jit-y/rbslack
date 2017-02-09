@@ -4,20 +4,16 @@ require 'faraday_middleware'
 module Rbslack
   class Client
     BASE_URL = 'https://slack.com'
-    attr_reader :api_key, :connection
-    def initialize(api_key:)
-      @api_key = api_key
+    attr_reader :token, :connection, :search
+    def initialize(token:)
       @connection = connection
+      @token = token
+      @search = Rbslack::Search::Request.new(connection, token)
     end
 
     def auth_test
-      res = connection.post '/api/auth.test', token: api_key, pretty: 1
-      puts res.body
-    end
-
-    def search(query:)
-      res = connection.get '/api/search.messages', token: api_key, query: query
-      puts res.body
+      res = connection.post '/api/auth.test', token: token, pretty: 1
+      res.body
     end
 
     private
