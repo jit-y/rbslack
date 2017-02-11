@@ -1,7 +1,7 @@
 module Rbslack
   module Search
     class Response
-      using Rbslack::Extension::HashEx
+      using Rbslack::Extension::HashExt
       attr_reader :response
       def initialize(response)
         @response = response.symbolize_keys

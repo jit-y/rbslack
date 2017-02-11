@@ -1,7 +1,8 @@
 module Rbslack
   module Extension
-    module HashEx
+    module HashExt
       refine Hash do
+        # written with reference to activesupport/lib/active_support/core_ext/hash/keys.rb
         def transform_keys
           result = {}
           each_key do |key|
