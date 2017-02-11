@@ -11,6 +11,8 @@ module Rbslack
       def find_by(query)
         res = connection.get(MESSAGE_URL, token: token, query: query, count: 1).body['messages']['matches'].first['previous']
         Rbslack::Search::Response.new(res)
+      rescue
+        nil
       end
     end
   end
