@@ -19,11 +19,11 @@ module Rbslack
         end unless method_defined?(:transform_keys!)
 
         def stringify_keys
-          transform_keys(:to_s)
+          transform_keys(&:to_s)
         end unless method_defined?(:stringify_keys)
 
         def stringify_keys!
-          transform_keys!(:to_s)
+          transform_keys!(&:to_s)
         end unless method_defined?(:stringify_keys!)
 
         def symbolize_keys
