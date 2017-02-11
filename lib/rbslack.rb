@@ -1,5 +1,5 @@
 require 'rbslack/version'
-require 'rbslack/extension/hash_ex'
+require 'rbslack/extension/hash_ext'
 require 'rbslack/client'
 require 'rbslack/search/request'
 require 'rbslack/search/response'
