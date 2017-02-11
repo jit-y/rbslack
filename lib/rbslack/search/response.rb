@@ -1,9 +1,10 @@
 module Rbslack
   module Search
     class Response
+      using Rbslack::Extension::HashEx
       attr_reader :response
       def initialize(response)
-        @response = response
+        @response = response.symbolize_keys
       end
 
       def title
