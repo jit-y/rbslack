@@ -81,7 +81,7 @@ describe Rbslack::Extension::HashExt do
     let!(:hash) { { 'dummy' => 'dummy' } }
     subject { instance.symbolize_keys }
     context 'transformmable key' do
-      it 'transforms keys of Hash to String non-destructively' do
+      it 'transforms keys of Hash to Symbol non-destructively' do
         expect(subject.keys.first).to be_an_instance_of(Symbol)
         expect(subject.keys.first).to eq :dummy
         expect(instance.hash.keys.first).to be_an_instance_of(String)
@@ -102,7 +102,7 @@ describe Rbslack::Extension::HashExt do
     subject { instance.symbolize_keys! }
     context 'transformmable key' do
       let!(:hash) { { 'dummy' => 'dummy' } }
-      it 'transforms keys of Hash to String destructively' do
+      it 'transforms keys of Hash to Symbol destructively' do
         expect(subject.keys.first).to be_an_instance_of(Symbol)
         expect(subject.keys.first).to eq :dummy
         expect(instance.hash.keys.first).to be_an_instance_of(Symbol)
